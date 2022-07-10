@@ -5,6 +5,7 @@
 --primery-white-color: #FFFFFF;
 --secondery-bgc-black: #2F303A;
 --section-bgc-grey: #F5F4FA;
+--cubik-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -91,6 +92,7 @@ font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
 text-decoration: none;
+transition: color 250ms var(--cubik-timing);
 }
 
 .logo-color{
@@ -102,8 +104,8 @@ line-height: 1.19;
 text-decoration: none;
 }
 
-.logo .logo-color:hover,
-.logo .logo-color:focus{
+.logo:hover,
+.logo:focus{
 color: var(--accent-color);
 }
 
@@ -150,6 +152,7 @@ letter-spacing: 0.02em;
 text-decoration: none;
 
 position: relative;
+transition: color 250ms var(--cubik-timing);
 }
 
 .link.current::after{
@@ -183,6 +186,7 @@ color: var(--primary-text-color);
 font-weight: 500;
 letter-spacing: 0.02em;
 text-decoration: none;
+transition: color 250ms var(--cubik-timing);
 }
 
 .auth-nav a:hover,
@@ -203,7 +207,9 @@ fill: var(--accent-color);
 justify-content: center;
 align-items: center;
 margin-right: 10px;
-fill: var(--primary-text-color);}
+fill: var(--primary-text-color);
+transition: fill 250ms var(--cubik-timing);
+}
 
 /* ГЕРОЙ */
 
@@ -271,6 +277,9 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
 cursor: pointer;
+transition: background-color 250ms var(--cubik-timing);
+
+
 }
 
 .button:hover,
@@ -284,7 +293,9 @@ opacity: 0;
 pointer-events: none;
 }
 
+
 /* MODAL*/
+
 
 .modal{
 position: absolute;
@@ -308,19 +319,37 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+background: rgba(0, 0, 0, 0.2);
+transition: opacity 250ms var(--cubik-timing), visibility 250ms var(--cubik-timing);
 }
 
 .close-button{
 position: absolute;
-top: 14px;
-right: 14px;
+top: 8px;
+right: 8px;
 width: 30px;
 height: 30px;
 padding: 0;
+
+background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50% 50%;
 }
 
+.close-button-icon{
+position: absolute;
+width: 18px;
+height: 18px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+
 /* Особенности*/
+
+
 .section{
 padding: 94px 0;
 }
@@ -365,7 +394,9 @@ color: var(--primary-text-color);
 line-height: 1.71;
 }
 
+
 /*Чем мы занимаемся*/
+
 
 .section-box{
 padding-bottom: 94px;
@@ -417,7 +448,9 @@ padding: 27px;
 margin: 0px;
 }
 
+
 /*Наша команда*/
+
 
 .team-box{
     padding: 94px 0;
@@ -487,6 +520,7 @@ margin-top: 16px;
     justify-content: center;
     align-items: center;
     fill: #AFB1B8;
+    transition: fill 250ms var(--cubik-timing), background 250ms var(--cubik-timing);
 }
 
 .area-icon-team:hover,
@@ -522,6 +556,7 @@ height: 92px;
     justify-content: center;
     align-items: center;
     fill: #AFB1B8;
+    transition: fill 250ms var(--cubik-timing), border 250ms var(--cubik-timing);
 }
 
 
@@ -534,7 +569,8 @@ height: 60px;
 .item-client:hover,
 .item-client:focus{
 border:1px solid var(--accent-color);
-fill: var(--accent-color);}
+fill: var(--accent-color);
+}
 
 
 /* Подвал */
@@ -558,6 +594,7 @@ line-height: 1.71;
 .contacts{
 color: rgba(255, 255, 255, 0.6);
 line-height: 1.71;  
+transition: color 250ms var(--cubik-timing);
 }
 
 .contacts:hover,
@@ -625,6 +662,7 @@ width: 44px;
     background-size: 20px;
     justify-content: center;
     align-items: center;
+    transition: background 250ms var(--cubik-timing);
 }
 
 .area-icon:hover,
@@ -647,6 +685,8 @@ text-align: center;
 cursor: pointer;
 border-radius: 4px;
 border-color: transparent;
+
+transition: color 250ms var(--cubik-timing), background-color 250ms var(--cubik-timing), box-shadow 250ms var(--cubik-timing);
 }
 
 .button-portfolio:hover,
@@ -676,7 +716,7 @@ overflow: hidden;
 background: rgba(33, 150, 243, 0.9);
 
  transform: translatey(100%);
- transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ transition: transform 250ms var(--cubik-timing);
  }
 
  .overlay>p {
@@ -689,7 +729,7 @@ color: var(--primery-white-color)
 
  .element-item:hover .overlay {
 transform: translatey(0);
-    }
+}
 
 .works {
 margin-bottom: 4px;
@@ -728,6 +768,7 @@ display: block;
 border: 1px solid #EEEEEE;
 position: relative;
 overflow: hidden;
+transition: box-shadow 250ms var(--cubik-timing);
 }
 
  .element-item:hover,
